@@ -129,7 +129,7 @@ class GlassKeyboardService : InputMethodService() {
         })
         r4.addView(charKey(if (arabic) "،" else ",", 1f))
         val space = key(if (arabic) "العربية" else "English", 4.2f, 0) { commit(" ") }
-        space.setTextColor(Color.argb(170, 255, 255, 255))
+                (space as TextView).setTextColor(Color.argb(170, 255, 255, 255))
         (space as TextView).textSize = 15f
         r4.addView(space)
         r4.addView(key(if (arabic) "EN ⇄ ع" else "ع ⇄ EN", 1.5f, 1, onLong = {
